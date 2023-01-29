@@ -1,0 +1,29 @@
+// Additional reset rules that are not set in normalize.css
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+* {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+button {
+    &:focus,
+    &:active {
+        outline: none;
+
+        & > * {
+            position: relative;
+        }
+    }
+}
+
+figure {
+    margin: 0;
+}
+
+input {
+    border-radius: 0;
+}

@@ -1,0 +1,149 @@
+@import "../../styles/style.react.scss";
+.c-btn {
+    display: inline-block;
+
+    min-width: 242px;
+    padding: 18px 37px 17px;
+
+    position: relative;
+
+    text-align: center;
+    letter-spacing: 2.1px;
+    text-transform: uppercase;
+
+    border-radius: 56px;
+    cursor: pointer;
+
+    transition: color $default-transition, background-color $default-transition;
+
+    appearance: none;
+
+    @include font($fontSize: 14, $lineHeight: 21, $fontWeight: 600);
+
+    .label {
+        display: flex;
+        justify-content: center;
+
+        transform: translateX(4px);
+
+        transition: transform $default-transition;
+
+        svg {
+            margin-right: 10px;
+        }
+    }
+
+    .icon {
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        height: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        opacity: 0;
+
+        transition: opacity $default-transition, right $default-transition;
+    }
+
+    &:hover {
+        text-decoration: none;
+
+        .label {
+            transform: translateX(0);
+        }
+
+        .icon {
+            right: 15px;
+
+            opacity: 1;
+        }
+    }
+
+    &--primary {
+        color: $color-white;
+
+        background-color: $color-piction-blue;
+
+        &:hover {
+            background-color: $color-navy-blue;
+        }
+    }
+
+    &--secondary {
+        padding: 15px 2px 16px;
+
+        color: $color-piction-blue;
+
+        border: 2px solid $color-piction-blue;
+        background-color: transparent;
+
+        &:hover {
+            color: $color-navy-blue;
+
+            background-color: $color-piction-blue;
+        }
+
+        .icon svg path {
+            stroke: $color-navy-blue;
+        }
+    }
+
+    &--tertiary {
+        padding: 15px 2px 16px;
+
+        color: $color-navy-blue;
+
+        border: 2px solid $color-navy-blue;
+        background-color: transparent;
+
+        &:hover {
+            color: $color-white;
+
+            background-color: $color-navy-blue;
+        }
+    }
+
+    &--quaternary {
+        color: $color-navy-blue;
+
+        background-color: $color-white;
+
+        &:hover {
+            color: $color-white;
+
+            background-color: $color-navy-blue;
+        }
+    }
+
+    &--alt {
+        color: $color-piction-blue;
+
+        border: 2px solid $color-piction-blue;
+
+        &:hover {
+            color: $color-white;
+
+            background-color: $color-piction-blue;
+        }
+    }
+
+    &--link {
+        min-width: auto;
+        padding: 0;
+
+        color: $color-piction-blue;
+
+        transition: $default-transition;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        .label {
+            transform: translateX(0);
+        }
+    }
+}

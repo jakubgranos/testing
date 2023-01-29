@@ -1,0 +1,159 @@
+@import "../../styles/style.react.scss";
+
+.icons-grid {
+    $self: &;
+
+    margin: 44px 0 70px;
+
+    @include media("<lg-xl") {
+        margin: 29px 0 79px;
+    }
+
+    @include media("<md") {
+        margin: 37px 0 63px;
+    }
+
+    .container {
+        @include media("<lg-xl") {
+            padding: 0 30px;
+        }
+    }
+
+    p {
+        @include font($fontSize: 28, $lineHeight: 38, $fontWeight: 300);
+
+        @include media("<lg-xl") {
+            @include font($fontSize: 21, $lineHeight: 29, $fontWeight: 300);
+        }
+    }
+
+    &__wrapper {
+        grid-gap: 30px;
+
+        @include media(">=lg-xl") {
+            display: grid;
+
+            margin-top: 66px;
+
+            grid-template-columns: repeat(5, 1fr);
+        }
+
+        @include media(">=md", "<lg-xl") {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            margin-top: 45px;
+
+            grid-row-gap: 71px;
+        }
+
+        @include media("<md") {
+            display: grid;
+
+            margin-top: 54px;
+
+            grid-template-columns: 1fr;
+        }
+
+        .icon--default {
+            @include media(">=md", "<lg-xl") {
+                width: 100%;
+                max-width: 301px;
+            }
+
+            @include media("<md") {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+
+    &--two-column {
+        @include media(">=lg-xl") {
+            margin: 69px 0 0;
+        }
+
+        @include media(">=md", "<lg-xl") {
+            margin: 57px 0 0;
+        }
+
+        @include media("<md") {
+            margin: 0;
+        }
+
+        #{$self}__wrapper {
+            display: grid;
+
+            margin-top: 0;
+
+            @include media("<md") {
+                grid-template-columns: 1fr;
+                grid-gap: 23px;
+            }
+
+            @include media(">=md") {
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: 30px;
+            }
+
+            .icon {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                max-width: unset;
+                padding: 10px;
+
+                background-color: $color-alabaster;
+
+                @include media(">=lg-xl") {
+                    min-height: 254px;
+                }
+
+                @include media(">=md", "<lg-xl") {
+                    min-height: 213px;
+                }
+
+                @include media("<md") {
+                    min-height: 216px;
+                }
+
+                .icon__title {
+                    transition: transform $default-transition;
+
+                    @include media(">=lg-xl") {
+                        margin-top: 10px;
+                    }
+
+                    @include media(">=md", "<lg-xl") {
+                        margin-top: 12px;
+                    }
+
+                    @include media("<md") {
+                        min-height: 10px;
+                    }
+                }
+
+                .icon__svg {
+                    transition: transform $default-transition;
+
+                    @include media("<lg-xl") {
+                        max-height: 67px;
+                    }
+                }
+
+                &:hover {
+                    transform: none;
+
+                    text-decoration: none;
+
+                    .icon__svg,
+                    .icon__title {
+                        transform: translateY(-4px);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,60 @@
+@use "sass:math";
+
+@mixin reset-button($background: transparent) {
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    background-color: $background;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+@mixin reset-list() {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+@mixin headings($start: 1, $end: 6) {
+    $headings: "";
+
+    @for $i from $start through $end {
+        @if $i !=$start {
+            $headings: "#{ $headings },h#{ $i },.h#{ $i }";
+        } @else {
+            $headings: "h#{ $i },.h#{ $i }";
+        }
+    }
+
+    #{ $headings } {
+        @content;
+    }
+}
+
+@mixin font(
+    $fontSize: $font-size-base,
+    $lineHeight: $line-height-base,
+    $fontWeight: false,
+    $letterSpacing: false,
+    $fontStyle: false,
+    $fontFamily: false
+) {
+    font-size: to-number($fontSize + "px");
+    line-height: to-number($lineHeight + "px");
+
+    @if $fontFamily {
+        font-family: $fontFamily;
+    }
+
+    @if $letterSpacing {
+        letter-spacing: to-number($letterSpacing + "px");
+    }
+
+    @if $fontWeight {
+        font-weight: $fontWeight;
+    }
+
+    @if $fontStyle {
+        font-style: $fontStyle;
+    }
+}

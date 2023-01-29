@@ -1,0 +1,10 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { HeroCTA, IconsGrid, Slider } from '../blocks';
+---
+
+<Layout title="Welcome to Astro.">
+    <HeroCTA title="Global Pro Bono Hub" img='assets/images/homepage/hero.png' client:visible></HeroCTA>
+    <IconsGrid client:visible />
+    <Slider client:load />
+</Layout>

@@ -1,0 +1,179 @@
+// Typography styles - headings, p, a, ul, ol, tables etc.
+
+html,
+body {
+    font-family: $font-soruce-sans;
+
+    @include font($fontSize: 20, $lineHeight: 30, $fontWeight: 400);
+}
+
+img {
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+table {
+    margin: 0 0 15px;
+}
+
+@include headings {
+    font-family: $font-soruce-serif;
+}
+
+h1 {
+    @include media(">=lg-xl") {
+        @include font($fontSize: 55, $lineHeight: 68, $fontWeight: 400);
+    }
+
+    @include media("<lg-xl") {
+        @include font($fontSize: 41, $lineHeight: 51, $fontWeight: 400);
+    }
+}
+
+h2 {
+    @include media(">=lg-xl") {
+        @include font($fontSize: 33, $lineHeight: 41, $fontWeight: 400);
+    }
+
+    @include media("<lg-xl") {
+        @include font($fontSize: 25, $lineHeight: 31, $fontWeight: 400);
+    }
+}
+
+h3 {
+    @include media(">=lg-xl") {
+        @include font($fontSize: 28, $lineHeight: 35, $fontWeight: 400);
+    }
+
+    @include media("<lg-xl") {
+        @include font($fontSize: 21, $lineHeight: 26, $fontWeight: 400);
+    }
+}
+
+h4 {
+    @include media(">=lg-xl") {
+        @include font($fontSize: 24, $lineHeight: 30, $fontWeight: 400);
+    }
+
+    @include media("<lg-xl") {
+        @include font($fontSize: 18, $lineHeight: 23, $fontWeight: 400);
+    }
+}
+
+h5 {
+    @include media(">=lg-xl") {
+        @include font($fontSize: 20, $lineHeight: 20, $fontWeight: 400);
+    }
+
+    @include media("<lg-xl") {
+        @include font($fontSize: 16, $lineHeight: 16, $fontWeight: 400);
+    }
+}
+
+h6 {
+    @include media(">=lg-xl") {
+        @include font($fontSize: 16, $lineHeight: 16, $fontWeight: 400);
+    }
+
+    @include media("<lg-xl") {
+        @include font($fontSize: 14, $lineHeight: 14, $fontWeight: 400);
+    }
+}
+
+p {
+    @include font($fontSize: 20, $lineHeight: 30, $fontWeight: 400);
+
+    &.lead-paragraph {
+        @include media("<lg-xl") {
+            margin-bottom: 39px;
+
+            @include font($fontSize: 21, $lineHeight: 29, $fontWeight: 300);
+        }
+
+        @include media(">=lg-xl") {
+            margin-bottom: 43px;
+
+            @include font($fontSize: 28, $lineHeight: 38, $fontWeight: 300);
+        }
+    }
+}
+
+button {
+    @include reset-button;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+ol {
+    color: currentColor;
+
+    list-style-type: none;
+}
+
+ol {
+    counter-reset: list;
+
+    padding-left: 27px;
+
+    margin-bottom: 43px;
+
+    li {
+        position: relative;
+        margin-bottom: 30px;
+
+        &::before {
+            content: counters(list, ".") ". ";
+            counter-increment: list;
+
+            position: absolute;
+            top: 0;
+            left: -25px;
+
+            font-weight: 600;
+        }
+    }
+}
+
+ul {
+    padding-left: 27px;
+
+    margin-bottom: 43px;
+
+    li {
+        position: relative;
+        margin-bottom: 30px;
+
+        &::before {
+            content: "•";
+
+            position: absolute;
+            top: 0;
+            left: -25px;
+
+            font-weight: 600;
+        }
+    }
+}
+
+i {
+    display: inline-block;
+}
+
+hr {
+    height: 2px;
+
+    border: none;
+}
+
+img {
+    display: block;
+}

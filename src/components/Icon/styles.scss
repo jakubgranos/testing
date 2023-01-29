@@ -1,0 +1,44 @@
+@import "../../styles/style.react.scss";
+
+.icon {
+    $self: &;
+
+    &__svg {
+        display: flex;
+    }
+
+    &--default {
+        text-align: center;
+        transition: transform $default-transition;
+
+        &:hover {
+            transform: translateY(-10px);
+        }
+
+        #{$self}__svg {
+            align-items: center;
+            justify-content: center;
+
+            height: 100%;
+            max-height: 80px;
+        }
+
+        #{$self}__title {
+            margin-top: 13px;
+
+            color: $color-primary;
+            letter-spacing: 2.1px;
+            text-transform: uppercase;
+
+            @include font($fontSize: 14, $lineHeight: 18, $fontWeight: 600);
+
+            @include media("<lg-xl") {
+                margin-top: 22px;
+            }
+
+            @include media("<md") {
+                margin-top: 14px;
+            }
+        }
+    }
+}

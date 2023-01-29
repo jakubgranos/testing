@@ -1,0 +1,69 @@
+@import "../../styles/style.react.scss";
+
+.featured-post {
+    &__details {
+        color: $color-piction-blue;
+        letter-spacing: 2.1px;
+        text-transform: uppercase;
+
+        @include font($fontSize: 14, $lineHeight: 18, $fontWeight: 400);
+
+        @include media(">=lg-xl") {
+            margin-bottom: 7px;
+        }
+
+        @include media("<lg-xl") {
+            margin-bottom: 8px;
+        }
+
+        span {
+            @include media(">=md") {
+                &[data-spacer] {
+                    margin: 0 14px;
+                }
+            }
+
+            @include media("<md") {
+                &[data-spacer] {
+                    margin: 0 9px;
+                }
+            }
+        }
+    }
+
+    &__link {
+        color: $color-lucky-point;
+    }
+
+    &__image {
+        position: relative;
+
+        @include media(">=lg-xl") {
+            margin-bottom: 27px;
+        }
+
+        @include media(">=md", "<lg-xl") {
+            margin-bottom: 18px;
+        }
+
+        @include media("<md") {
+            margin-bottom: 14px;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            margin-bottom: 0;
+        }
+    }
+
+    &__title {
+        display: inline;
+
+        @include font($fontSize: 28, $lineHeight: 35, $fontWeight: 400);
+
+        @include media("<lg-xl") {
+            @include font($fontSize: 21, $lineHeight: 26, $fontWeight: 400);
+        }
+    }
+}

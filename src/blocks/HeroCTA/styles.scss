@@ -1,0 +1,74 @@
+@import "../../styles/style.react.scss";
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 150px 0;
+
+    position: relative;
+
+    @include media("<md") {
+        background-position: 15%;
+    }
+
+    br {
+        @include media("<md") {
+            display: none;
+        }
+    }
+
+    &__background {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.hero--default {
+    text-align: center;
+
+    @include media(">=lg-xl") {
+        min-height: 867px;
+        padding: 213px 0 200px;
+    }
+
+    @include media(">=md", "<lg-xl") {
+        min-height: 667px;
+    }
+
+    @include media("<md") {
+        min-height: 667px;
+        padding: 100px 0 149px;
+    }
+
+    h1 {
+        @include media(">=lg-xl") {
+            margin-bottom: 28px;
+
+            @include font($fontSize: 100, $lineHeight: 128, $fontWeight: 400);
+        }
+
+        @include media(">=md", "<lg-xl") {
+            margin-bottom: 30px;
+
+            @include font($fontSize: 75, $lineHeight: 75, $fontWeight: 400);
+        }
+
+        @include media("<md") {
+            @include font($fontSize: 55, $lineHeight: 60, $fontWeight: 400);
+        }
+    }
+}

@@ -1,0 +1,41 @@
+---
+import "../styles/style.scss";
+import { Header } from "../global/Header";
+
+export interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+
+const pages = [
+    { href: "/news-landing", label: "News", haveChildren: false },
+    {
+        href: "/resources-landing",
+        label: "Resources",
+        haveChildren: true,
+    },
+    { href: "/events-landing", label: "Events", haveChildren: false },
+    { href: "/jobs-landing", label: "Jobs", haveChildren: false },
+    { href: "/about", label: "About", haveChildren: false },
+    { href: "/submissions", label: "Submissions", haveChildren: false },
+];
+
+const {} = pages
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="stylesheet" href="assets/css/vendor/normalize.css" as="style" >
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+        <Header/>
+        <slot />
+	</body>
+</html>

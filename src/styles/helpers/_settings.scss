@@ -1,0 +1,46 @@
+@import "include-media/dist/include-media";
+
+// colors. Color names base on https://chir.ag/projects/name-that-color/
+$color-black: #000000;
+$color-white: #ffffff;
+$color-navy-blue: #010086;
+$color-piction-blue: #2999ec;
+$color-martinique: #30324e;
+$color-boulder: #7b7777;
+$color-violet: #100e4a;
+$color-regent: #9ab7de;
+$color-lucky-point: #1a1769;
+$color-cerise-red: #d63654;
+$color-porcelain: #f0f4f5;
+$color-east-bay: #4d4c8b;
+$color-alto: #d9d7d7;
+$color-purple: #341050;
+$color-haiti: #101332;
+$color-wisteria: #9668ba;
+$color-dove-gray: #707070;
+$color-alabaster: #f8f8f8;
+$color-porcelain-light: #edf1f2;
+$color-wild-sand: #f5f5f5;
+$color-geyser: #dee6e8;
+$color-masala: #3c3333;
+$color-dove-gray: #6e6b6b;
+$color-black-haze: #f4f5f5;
+$color-alabaster: #f7f7f7;
+$color-mischka: #cecfda;
+
+// primary & secondary colors
+$color-primary: $color-black;
+$color-secondary: $color-white;
+
+//breakpoints
+$breakpoints: (
+    "sm": 480px,
+    "md": 768px,
+    "lg": 1024px,
+    "lg-xl": 1280px,
+    "xl": 1440px,
+);
+
+// Transitions
+$default-transition: 0.2s linear;
+$default-transition-no-linear: 0.2s;

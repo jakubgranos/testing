@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="58.618" height="67" viewBox="0 0 58.618 67">
+  <g id="Group_1188" data-name="Group 1188" transform="translate(-1276.803 -1056)">
+    <g id="Group_1183" data-name="Group 1183" transform="translate(1276.803 1064.383)">
+      <g id="Group_1184" data-name="Group 1184" transform="translate(0 0)">
+        <path id="Path_7542" data-name="Path 7542" d="M79.915,24.99H27.594a2.611,2.611,0,0,0-2.6,2.6V79.914a2.612,2.612,0,0,0,2.6,2.6H79.915a2.612,2.612,0,0,0,2.6-2.6V27.594a2.611,2.611,0,0,0-2.6-2.6" transform="translate(-23.9 -23.9)" fill="#2b2791"/>
+        <path id="Path_7550" data-name="Path 7550" d="M3.451,0H54.078a3.451,3.451,0,0,1,3.451,3.451V54.077a3.451,3.451,0,0,1-3.451,3.451H3.451A3.451,3.451,0,0,1,0,54.077V3.451A3.451,3.451,0,0,1,3.451,0Z" fill="#2b2791"/>
+        <path id="Path_7543" data-name="Path 7543" d="M79.419,23.454H26.107a2.637,2.637,0,0,0-2.653,2.6V42H82.072V26.058a2.637,2.637,0,0,0-2.653-2.6" transform="translate(-23.454 -23.454)" fill="#2999ec"/>
+      </g>
+    </g>
+    <rect id="Rectangle_1000" data-name="Rectangle 1000" width="7" height="18" rx="3.5" transform="translate(1287 1056)" fill="#ea1f56"/>
+    <rect id="Rectangle_1022" data-name="Rectangle 1022" width="7" height="18" rx="3.5" transform="translate(1320 1056)" fill="#ea1f56"/>
+    <rect id="Rectangle_1002" data-name="Rectangle 1002" width="7" height="7" transform="translate(1289 1092)" fill="#fff"/>
+    <rect id="Rectangle_1027" data-name="Rectangle 1027" width="7" height="7" transform="translate(1289 1106)" fill="#fff"/>
+    <rect id="Rectangle_1025" data-name="Rectangle 1025" width="7" height="7" transform="translate(1303 1092)" fill="#fff"/>
+    <rect id="Rectangle_1026" data-name="Rectangle 1026" width="7" height="7" transform="translate(1317 1092)" fill="#fff"/>
+    <path id="Intersection_20" data-name="Intersection 20" d="M0,6.428V0H6.584V6.428A3.292,3.292,0,0,1,0,6.428Z" transform="translate(1287.066 1064.383)" fill="#2b2791" stroke="rgba(0,0,0,0)" stroke-miterlimit="10" stroke-width="1"/>
+    <path id="Intersection_21" data-name="Intersection 21" d="M0,6.428V0H6.584V6.428A3.292,3.292,0,0,1,0,6.428Z" transform="translate(1319.979 1064.383)" fill="#2b2791" stroke="rgba(0,0,0,0)" stroke-miterlimit="10" stroke-width="1"/>
+  </g>
+</svg>
