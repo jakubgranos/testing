@@ -7,35 +7,35 @@ export const Slider = () => {
     const itemsArray = [
         {
             href: "#",
-            imageSrc: "pro-bono-page.png",
+            imageSrc: "pro-bono-page.webp",
             title: "Pro bono guide: Establishing a pro bono program at your law firm",
             organization: "Pilnet",
             date: "22 OCT 2022",
         },
         {
             href: "#",
-            imageSrc: "pro-bono-page.png",
+            imageSrc: "pro-bono-page.webp",
             title: "Pro bono guide: Establishing a pro bono program at your law firm",
             organization: "Pilnet",
             date: "22 OCT 2022",
         },
         {
             href: "#",
-            imageSrc: "pro-bono-page.png",
+            imageSrc: "pro-bono-page.webp",
             title: "Pro bono guide: Establishing a pro bono program at your law firm",
             organization: "Pilnet",
             date: "22 OCT 2022",
         },
         {
             href: "#",
-            imageSrc: "pro-bono-page.png",
+            imageSrc: "pro-bono-page.webp",
             title: "Pro bono guide: Establishing a pro bono program at your law firm",
             organization: "Pilnet",
             date: "22 OCT 2022",
         },
         {
             href: "#",
-            imageSrc: "pro-bono-page.png",
+            imageSrc: "pro-bono-page.webp",
             title: "Pro bono guide: Establishing a pro bono program at your law firm",
             organization: "Pilnet",
             date: "22 OCT 2022",
@@ -62,4 +62,8 @@ export const Slider = () => {
             </Swiper>
         </div>
     );
+};
+
+export const SldierInit = () => {
+    return <Slider />;
 };
