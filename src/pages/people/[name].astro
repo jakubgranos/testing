@@ -1,0 +1,19 @@
+---
+import axios from "axios";
+
+export async function getStaticPaths() {
+    const data = await axios.get("https://swapi.dev/api/people").then((res) => {
+        return res.data.results
+    });
+
+    return data.map((item: any) => {
+        const { name } = item
+        return {
+            params: { name },
+        };
+    });
+}
+
+const { name  } = Astro.params;
+---
+<div><h1>clicked star wars  guy:{name}</h1></div>

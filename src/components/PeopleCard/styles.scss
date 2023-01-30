@@ -1,0 +1,44 @@
+@import "../../styles/style.react.scss";
+
+.people-card {
+    background: lightcoral;
+    padding: 15px;
+
+    &__details {
+        color: $color-piction-blue;
+        letter-spacing: 2.1px;
+        text-transform: uppercase;
+        display: flex;
+        flex-direction: column;
+
+        @include font($fontSize: 14, $lineHeight: 18, $fontWeight: 400);
+
+        @include media(">=lg-xl") {
+            margin-bottom: 7px;
+        }
+
+        @include media("<lg-xl") {
+            margin-bottom: 8px;
+        }
+    }
+
+    a {
+        display: flex;
+        flex-direction: column;
+    }
+
+    h3 {
+        color: $color-lucky-point;
+        margin: 10px 0;
+    }
+
+    &__title {
+        display: inline;
+
+        @include font($fontSize: 28, $lineHeight: 35, $fontWeight: 400);
+
+        @include media("<lg-xl") {
+            @include font($fontSize: 21, $lineHeight: 26, $fontWeight: 400);
+        }
+    }
+}
