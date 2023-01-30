@@ -1,5 +1,6 @@
 import type { FC } from "react";
 import { Button } from "../../components";
+import { Slider } from "../Slider";
 import "./styles.scss";
 
 type HeroCTAProps = {

@@ -43,9 +43,22 @@ export const Slider = () => {
     ];
     return (
         <div className="container">
-            <Swiper>
-                <SwiperSlide>Slide 1</SwiperSlide>
-                <SwiperSlide>Slide 2</SwiperSlide>
+            <Swiper
+                spaceBetween={50}
+                slidesPerView={3}
+                autoplay={{
+                    delay: 2500,
+                    disableOnInteraction: false,
+                }}
+                modules={[Autoplay]}
+            >
+                {itemsArray.map((item, index) => {
+                    return (
+                        <SwiperSlide key={index}>
+                            <FeaturedPost post={item} />
+                        </SwiperSlide>
+                    );
+                })}
             </Swiper>
         </div>
     );
